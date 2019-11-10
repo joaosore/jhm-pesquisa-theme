@@ -11,8 +11,7 @@ import { init_animation } from "./js/animation";
 import { init_submit_formulario } from "./js/formulario/submit";
 import { init_validade_formulario } from "./js/formulario/validate";
 
-function init() {}
-init();
+import { init_loader } from "./js/loader";
 
 var FadeTransition = Barba.BaseTransition.extend({
   start: function() {
@@ -22,7 +21,6 @@ var FadeTransition = Barba.BaseTransition.extend({
   },
   fadeOut: function() {
     $(".loading-page").fadeIn();
-    console.log("AQUI");
     return $(this.oldContainer)
       .animate({ opacity: 1 })
       .promise();
@@ -37,7 +35,6 @@ var FadeTransition = Barba.BaseTransition.extend({
       opacity: 1
     });
     $el.animate({ opacity: 1 }, 400, function() {
-      console.log("AQUI");
       $(".loading-page").fadeOut();
       _this.done();
     });
@@ -53,6 +50,7 @@ Barba.Dispatcher.on("transitionCompleted", function(
   init_carousel();
   init_video();
   init_animation();
+  init_loader();
   $(".loading-page").fadeOut();
 });
 
@@ -98,7 +96,9 @@ PageOQueFazemos.init();
 var PageImprensa = Barba.BaseView.extend({
   namespace: "page-imprensa",
   onEnter: function() {},
-  onEnterCompleted: function() {},
+  onEnterCompleted: function() {
+    init_accordion();
+  },
   onLeave: function() {},
   onLeaveCompleted: function() {}
 });
@@ -107,9 +107,7 @@ PageImprensa.init();
 var PagePortfilio = Barba.BaseView.extend({
   namespace: "page-portfolio",
   onEnter: function() {},
-  onEnterCompleted: function() {
-    init_accordion();
-  },
+  onEnterCompleted: function() {},
   onLeave: function() {},
   onLeaveCompleted: function() {}
 });
