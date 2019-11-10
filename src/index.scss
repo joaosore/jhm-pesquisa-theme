@@ -1,0 +1,60 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~owl.carousel/dist/assets/owl.carousel.css";
+
+@import "./global/fonts.scss";
+
+@import "./scss/pages/Home/inicial.scss";
+@import "./scss/pages/Home/eventos.scss";
+@import "./scss/pages/Home/video.scss";
+@import "./scss/pages/Home/o-que-fazemos.scss";
+@import "./scss/pages/Home/portfolio.scss";
+
+@import "./scss/pages/Sobre/titulo-sobre.scss";
+@import "./scss/pages/Sobre/informação.scss";
+
+@import "./scss/pages/O-que-fazemos/titulo-o-que-fazemos.scss";
+
+@import "./scss/pages/Imprensa/titulo-outros.scss";
+@import "./scss/pages/Imprensa/releases.scss";
+@import "./scss/pages/Imprensa/entrevistas.scss";
+@import "./scss/pages/Imprensa/poadcast.scss";
+
+@import "./scss/pages/Portfolio/pdfs.scss";
+
+@import "./scss/pages/Contato/contato.scss";
+@import "./scss/pages/Contato/assessoria.scss";
+
+@import "./scss/header.scss";
+@import "./scss/footer.scss";
+
+@import "./scss/component/button.scss";
+@import "./scss/component/carousel.scss";
+@import "./scss/component/acordion.scss";
+@import "./scss/component/loading-page.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Futura Std";
+  font-size: 16px;
+  margin: 0;
+  -webkit-font-smoothing: antialiased !important;
+  a {
+    text-decoration: none !important;
+    &:visited {
+      color: #000;
+    }
+    color: #000;
+  }
+}
+
+@media screen and (max-width: 1330px) {
+  body {
+    font-size: 14px;
+  }
+}

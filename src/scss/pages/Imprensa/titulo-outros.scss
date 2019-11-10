@@ -1,0 +1,36 @@
+#titulo-outros {
+  .titulo-outros {
+    position: relative;
+    background-image: url(./imgs/bg_04.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 750px;
+    height: 65vh;
+    padding-top: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-family: "Futura Std";
+      color: #fff;
+      font-size: 6.25em;
+      text-align: center;
+      letter-spacing: 10px;
+      margin: 0;
+      font-weight: 700;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #titulo-outros {
+    .titulo-outros {
+      min-height: 515px;
+      height: auto;
+      h1 {
+        text-align: center;
+        font-size: 2em;
+      }
+    }
+  }
+}

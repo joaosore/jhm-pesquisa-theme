@@ -1,0 +1,294 @@
+header {
+  background-color: #1365c0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  .navbar-brand {
+    width: 100px;
+    height: 50px;
+    background-color: #ffffff;
+    -webkit-mask-image: url(./imgs/logo.svg);
+    mask-image: url(./imgs/logo.svg);
+    -webkit-mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+  }
+  .navbar {
+    padding: 0;
+    height: 100%;
+    .menu-mobile {
+      display: none;
+    }
+  }
+  .collapse {
+    align-items: center;
+    justify-content: flex-end;
+    .box-logo {
+      width: 100px;
+      height: 50px;
+      img {
+        max-width: 100%;
+      }
+    }
+    .menu-menu-1-container {
+      max-width: 600px;
+      width: 100%;
+    }
+    #menu-menu-1 {
+      max-width: 600px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 30px;
+
+      height: 66px;
+      position: relative;
+      margin: 0;
+      li {
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          &:after {
+            width: 120%;
+          }
+        }
+        &:after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 2px;
+          background-color: #fff;
+          bottom: 0;
+          position: absolute;
+          transition: all 350ms ease-in-out;
+        }
+        a {
+          font-family: "Futura Std";
+          color: #ffffff;
+          font-weight: 600;
+          font-size: 0.8125em;
+          text-transform: uppercase;
+          &.nav-link {
+            padding: 0;
+          }
+        }
+      }
+    }
+    .btn-mobile {
+      display: none;
+    }
+  }
+  .box-btn {
+    position: relative;
+    background-color: #ffffff;
+    height: 66px;
+    max-width: 198px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+    &:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background-color: #1365c0;
+      bottom: 0;
+      position: absolute;
+      transition: all 350ms ease-in-out;
+    }
+    a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      p {
+        max-width: 138px;
+        margin: 0;
+        font-family: "Futura Std";
+        color: #1365c0;
+        font-weight: 800;
+        font-size: 0.6875em;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  header {
+    background-color: #fff;
+    height: 66px;
+    .navbar-brand {
+      background-color: #000;
+      height: 37px;
+      width: 76px;
+    }
+    .navbar {
+      padding: 15px;
+      .menu-mobile {
+        position: relative;
+        width: 30px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+        cursor: pointer;
+        z-index: 10;
+        .bar {
+          background-color: #000;
+          height: 2px;
+          width: 100%;
+          &.top {
+            transition: all 350ms ease-in-out;
+            position: absolute;
+            top: 0;
+          }
+          &.bottom {
+            transition: all 350ms ease-in-out;
+            position: absolute;
+            bottom: 0;
+          }
+          &.left {
+            width: 75%;
+            transition: all 350ms ease-in-out;
+            position: absolute;
+          }
+          &.right {
+            width: 75%;
+            transition: all 350ms ease-in-out;
+            position: absolute;
+          }
+        }
+        &.active {
+          .bar {
+            background-color: #000;
+            &.top {
+              transition: all 350ms ease-in-out;
+              position: absolute;
+              top: 0;
+              opacity: 0;
+            }
+            &.bottom {
+              transition: all 350ms ease-in-out;
+              position: absolute;
+              bottom: 0;
+              opacity: 0;
+            }
+            &.left {
+              transform: rotateZ(45deg);
+              position: absolute;
+            }
+            &.right {
+              transform: rotateZ(-45deg);
+              position: absolute;
+            }
+          }
+        }
+      }
+    }
+    .collapse {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      font-size: 1.25em;
+      display: flex;
+      padding: 10px;
+
+      display: flex !important;
+      position: fixed;
+      transform: translateX(100%);
+
+      transition: all 350ms ease-in-out;
+
+      &.active {
+        transform: translateX(0);
+      }
+      #menu-menu-1 {
+        flex-direction: column;
+        height: 100%;
+        align-items: flex-start;
+        li {
+          a {
+            color: #000;
+          }
+        }
+      }
+      .btn-mobile {
+        height: 66px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        bottom: 10px;
+        background-color: #000;
+        width: calc(100% - 20px);
+        max-width: 100%;
+        left: 10px;
+
+        &:hover {
+          &:after {
+            width: 100%;
+          }
+        }
+        &:after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 2px;
+          background-color: #1365c0;
+          bottom: 0;
+          position: absolute;
+          transition: all 350ms ease-in-out;
+        }
+        a {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          p {
+            max-width: 215px;
+            margin: 0;
+            font-family: "Futura Std";
+            color: #fff;
+            font-weight: 800;
+            font-size: 0.75em;
+            text-transform: uppercase;
+            text-align: center;
+          }
+        }
+      }
+      ul {
+        height: auto;
+        align-items: end;
+        li {
+          padding: 10px 0;
+        }
+      }
+    }
+    .box-btn {
+      display: none;
+    }
+  }
+}

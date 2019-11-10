@@ -1,0 +1,38 @@
+#portfolio {
+  position: relative;
+  background-image: url(./imgs/bg_02.png);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  min-height: 750px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .imagem {
+      margin-bottom: 30px;
+      img {
+        max-width: 300px;
+      }
+    }
+    h1 {
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+    a {
+      font-size: 1em;
+      color: #000;
+      text-decoration: underline;
+      font-weight: 700;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #portfolio {
+  }
+}

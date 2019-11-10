@@ -1,0 +1,84 @@
+.owl-carousel {
+  .owl-nav {
+    padding: 0 15px;
+    position: absolute;
+    top: calc(50% - 7.5px);
+    width: 100%;
+    margin: auto;
+    max-width: 1140px;
+    margin-left: calc((100% - 1140px) / 2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none;
+    button {
+      pointer-events: all;
+      outline: none;
+      &.owl-prev {
+        background-image: url(./imgs/back.svg);
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: 10px;
+        background-repeat: no-repeat;
+        background-position: center;
+        span {
+          display: none;
+        }
+      }
+      &.owl-next {
+        background-image: url(./imgs/back.svg);
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: 10px;
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: rotateZ(180deg);
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .owl-carousel {
+    .owl-nav {
+      margin-left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .owl-carousel {
+    .owl-nav {
+      button {
+        &.owl-prev {
+          width: 20px;
+          height: 20px;
+          background-size: 6px;
+        }
+        &.owl-next {
+          width: 20px;
+          height: 20px;
+          background-size: 6px;
+        }
+      }
+    }
+  }
+
+  #entrevistas .conteudo .video {
+    min-height: auto;
+    max-height: 300px;
+  }
+}

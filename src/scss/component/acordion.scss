@@ -1,0 +1,81 @@
+.accordion {
+  padding-left: 35px;
+  padding-right: 35px;
+  .box {
+    cursor: pointer;
+    max-width: 1260px;
+    width: 100%;
+    border: solid 1px #f8f8f8;
+    margin-bottom: 10px;
+    &.active {
+      .title {
+        &:after {
+          background-image: url("./imgs/accordion-after.svg");
+          width: 15px;
+          height: 4px;
+        }
+      }
+      .text {
+        max-height: 1260px;
+        background-color: #fcfcfc;
+        padding: 15px;
+      }
+    }
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+      padding: 35px 35px;
+      &:after {
+        content: "";
+        background-image: url("./imgs/accordion-before.svg");
+        width: 15px;
+        height: 15px;
+        display: block;
+        transition: all 350ms ease-in-out;
+      }
+      span {
+        font-family: "Futura Std";
+        font-size: 1.125em;
+        color: #000;
+      }
+    }
+    .text {
+      border: solid 1px #f8f8f8;
+      max-height: 0;
+      overflow: hidden;
+      padding-left: 15px;
+      padding-right: 15px;
+      transition: all 350ms ease-in-out;
+      p {
+        font-family: "Futura Std";
+        font-size: 1.125em;
+        color: #000;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .accordion {
+    padding-left: 15px;
+    padding-right: 15px;
+    .box {
+      &.active {
+        .text {
+          max-height: 1000px;
+          padding: 15px;
+        }
+      }
+      .title {
+        padding: 15px;
+      }
+      .text {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+}
