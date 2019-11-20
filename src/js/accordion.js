@@ -4,7 +4,6 @@ export function init_accordion() {
       $(".accordion .box").removeClass("active");
     } else {
       $(".accordion .box").removeClass("active");
-      console.log($(this));
       $(this).addClass("active");
     }
   });

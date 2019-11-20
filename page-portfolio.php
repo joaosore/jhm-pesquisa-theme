@@ -11,7 +11,7 @@ get_header();
 
 ?>
 
-<div class="barba-container" data-namespace="page-portfolio">
+<main class="barba-container" data-barba="container" data-barba-namespace="page-portfolio">
 
   <section id="titulo-outros">
     <div class="titulo-outros">
@@ -36,7 +36,7 @@ get_header();
     </div>
   </section>
 
-</div>
+</main>
 
 <?php 
 

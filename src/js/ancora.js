@@ -1,6 +1,9 @@
 export function init_ancora() {
   var $doc = $("html, body");
   $("a").click(function() {
+    $(".menu-mobile").removeClass("active");
+    $(".collapse").removeClass("active");
+    $("body").attr("style", "overflow: auto;");
     if ($.attr(this, "href").charAt(0) === "#") {
       var el = $("body").find($.attr(this, "href"));
       if ($(el).length > 0) {

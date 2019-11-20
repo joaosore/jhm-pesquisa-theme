@@ -11,22 +11,62 @@ get_header();
 
 ?>
 
-<div class="barba-container" data-namespace="page-home">
+<main class="barba-container" data-barba="container" data-barba-namespace="page-home">
 
   <section id="inicial">
     <div class="owl-carousel owl-theme carousel-1">
       <?php foreach(get_dados('carousel') as $item) { ?>
-        <div class="item">
-          <div class="card-carousel" style="background-image: url(<?php echo $item['imagem']['url']; ?>);">
-            <div class="box">
-              <h1><?php echo $item['titulo']; ?></h1>
-              <?php echo $item['descricao']; ?>
-              <a href="<?php echo $item['botao']['url']; ?>" target="<?php echo $item['botao']['target']; ?>" class="btn-custo" >
-                <span><?php echo $item['botao']['title']; ?></span>
-              </a>
+
+        <?php if(!empty($item['video_bg'])) { ?>
+          
+          <div class="item">
+            <div class="card-carousel <?php if(!empty($item['video_bg'])) { echo 'box-video'; } ?>" style="background-image: url(<?php echo $item['imagem']['url']; ?>);">
+              <div class="box <?php if(!empty($item['video_bg'])) { echo 'video'; } ?>">
+                <div class="conteudo">
+                  <?php if(!empty($item['titulo'])) { ?>
+                    <h1><?php echo $item['titulo']; ?></h1>
+                  <?php } ?>
+                  <?php echo $item['descricao']; ?>
+                  <?php if(!empty($item['botao'])) { ?>
+                    <a href="<?php echo $item['botao']['url']; ?>" target="<?php echo $item['botao']['target']; ?>" class="btn-custo" >
+                      <span><?php echo $item['botao']['title']; ?></span>
+                    </a>
+                  <?php } ?>
+                </div>
+                <video src="<?php echo $item['video_bg']; ?>" autoplay loop muted playsinline></video>
+              </div>
             </div>
           </div>
-        </div>
+
+        <?php } else { ?>
+
+          <div class="item">
+            <div class="card-carousel <?php if(!empty($item['video'])) { echo 'play-video';  }?>" style="background-image: url(<?php echo $item['imagem']['url']; ?>);">
+              <div class="box">
+
+                <?php if(!empty($item['video'])) { ?>
+
+                  <video src="<?php echo $item['video']; ?>" autoplay loop muted playsinline controls controlsList="nodownload"></video>
+
+                <?php } else { ?>
+
+                  <?php if(!empty($item['titulo'])) { ?>
+                    <h1><?php echo $item['titulo']; ?></h1>
+                  <?php } ?>
+                  <?php echo $item['descricao']; ?>
+                  <?php if(!empty($item['botao'])) { ?>
+                    <a href="<?php echo $item['botao']['url']; ?>" target="<?php echo $item['botao']['target']; ?>" class="btn-custo" >
+                      <span><?php echo $item['botao']['title']; ?></span>
+                    </a>
+                  <?php } ?>
+
+                <?php } ?>
+              </div>
+            </div>
+          </div>
+
+        <?php } ?>
+      
       <?php } ?>
     </div>
   </section>
@@ -85,7 +125,7 @@ get_header();
     </div>
   </section>
 
-</div>
+</main>
 
 <?php 
 

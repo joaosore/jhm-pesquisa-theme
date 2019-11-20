@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 
-  <div class="loading-page"> 
+  <!-- <div class="loading-page"> 
     <svg class="lds-spinner" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><g transform="rotate(0 50 50)">
       <rect x="47" y="24" rx="9.4" ry="4.8" width="6" height="12" fill="#1365c0">
           <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.9166666666666666s" repeatCount="indefinite"></animate>
@@ -73,7 +73,7 @@
         </rect>
       </g>
     </svg>
-  </div>
+  </div> -->
   
 	<header>
     <nav class="container navbar navbar-expand-lg">
@@ -110,5 +110,5 @@
     </nav>
 	</header>
 	
-  <div id="barba-wrapper">
+  <div data-barba="wrapper">
 	

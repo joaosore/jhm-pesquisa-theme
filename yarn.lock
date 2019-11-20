@@ -118,6 +118,19 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@barba/core@^2.8.0":
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/@barba/core/-/core-2.8.0.tgz#09b332b07f4b880554b83f0e07178b19d32b4254"
+  integrity sha512-n4xHXHqQwqgcGNPy/yVo8BDR4PSvOIgb0ZJ4UyYpdP0srcsDvja4Lrkzhb6sUCRHeHC5Y5lcdlvN33WCiOKRxw==
+  dependencies:
+    is-promise "^2.1.0"
+    path-to-regexp "^3.0.0"
+
+"@barba/css@^2.1.13":
+  version "2.1.13"
+  resolved "https://registry.yarnpkg.com/@barba/css/-/css-2.1.13.tgz#e911aeb2dc89b0ce89c37f646096848f7abd9566"
+  integrity sha512-11FKTPxG7Jz6FMD+eG0agSBjKdYUMUalJzBg2ZKrmEzPTwzzRl+0UjK/D350z37yTRe0IDvqmxgE9Upr2hrXww==
+
 "@types/events@*":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
@@ -3318,6 +3331,11 @@ is-plain-object@^2.0.3, is-plain-object@^2.0.4:
   dependencies:
     isobject "^3.0.1"
 
+is-promise@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/is-promise/-/is-promise-2.1.0.tgz#79a2a9ece7f096e80f36d2b2f3bc16c1ff4bf3fa"
+  integrity sha1-eaKp7OfwlugPNtKy87wWwf9L8/o=
+
 is-regex@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/is-regex/-/is-regex-1.0.4.tgz#5517489b547091b0930e095654ced25ee97e9491"
@@ -4452,6 +4470,11 @@ path-to-regexp@0.1.7:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-0.1.7.tgz#df604178005f522f15eb4490e7247a1bfaa67f8c"
   integrity sha1-32BBeABfUi8V60SQ5yR6G/qmf4w=
+
+path-to-regexp@^3.0.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-3.1.0.tgz#f45a9cc4dc6331ae8f131e0ce4fde8607f802367"
+  integrity sha512-PtHLisEvUOepjc+sStXxJ/pDV/s5UBTOKWJY2SOz3e6E/iN/jLknY9WL72kTwRrwXDUbZTEAtSnJbz2fF127DA==
 
 path-type@^1.0.0:
   version "1.1.0"
